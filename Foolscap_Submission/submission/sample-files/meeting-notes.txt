@@ -1,0 +1,7 @@
+Meeting notes
+
+Attendees: Akshay, Jamie, Morgan
+
+Decisions:
+Ship on Friday.
+Review metrics next week.

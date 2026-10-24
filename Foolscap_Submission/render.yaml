@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: foolscap-demo
+    runtime: node
+    plan: free
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: DATA_DIR
+        value: ./data
+# Free plan filesystem is ephemeral: documents reset on redeploy/restart.
+# For durable data, use a paid plan with a persistent disk mounted at /var/data
+# and set DATA_DIR=/var/data, or replace the JSON store with a database.
